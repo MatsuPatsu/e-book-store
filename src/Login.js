@@ -3,6 +3,7 @@ import './Login.css'
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "./firebase";
 
+
 // function Login() {
 //     const history = useHistory();
 //     const [email, setEmail] = useState('');
@@ -33,51 +34,88 @@ import { auth } from "./firebase";
 //     }
 
 //     return (
-//         <div className='login'>
-//             <Link to='/'>
-//                 <img
-//                     className="login__logo"
-//                     src='https://api-server.chulabookcourse.com/uploads/1598606417399-Logo_Chula.png' 
-//                 />
-//             </Link>
+        // <div className='login'>
+        //     <Link to='/'>
+        //         <img
+        //             className="login__logo"
+        //             src='https://api-server.chulabookcourse.com/uploads/1598606417399-Logo_Chula.png' 
+        //         />
+        //     </Link>
 
-//             <div className='login__container'>
-//                 <h1>Sign-in</h1>
+        //     <div className='login__container'>
+        //         <h1>Sign-in</h1>
 
-//                 <form>
-//                     <h5>E-mail</h5>
-//                     <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
+        //         <form>
+        //             <h5>E-mail</h5>
+        //             <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
 
-//                     <h5>Password</h5>
-//                     <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
+        //             <h5>Password</h5>
+        //             <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
 
-//                     <button type='submit' onClick={signIn} className='login__signInButton'>Sign In</button>
-//                 </form>
+        //             <button type='submit' onClick={signIn} className='login__signInButton'>Sign In</button>
+        //         </form>
 
-//                 <p>
-//                     By signing-in you agree to the Chula Book Conditions of Use & Sale. Please
-//                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
-//                 </p>
+        //         <p>
+        //             By signing-in you agree to the Chula Book Conditions of Use & Sale. Please
+        //             see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+        //         </p>
 
-//                 <button onClick={register} className='login__registerButton'>Create your New Account</button>
-//             </div>
+        //         <button onClick={register} className='login__registerButton'>Create your New Account</button>
+        //     </div>
 //         </div>
 //     )
 
-
 // }
+
+
 function Login() {
-return(<div class="container" align="center">
-    <h1>Login & Register</h1>
-    <br/>
-    <form action="log-in.js" method="POST">
-        <input type="submit" value="Login" class="btn btn-primary" />
-    </form>
-    <br/>
-    <form action="register.html" method="POST">
-        <input type="submit" value="Register" class="btn btn-primary" />
-    </form>
-</div>)
+return(
+    <div className='login'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <Link to='/'>
+            <img
+                className="login__logo"
+                src='https://api-server.chulabookcourse.com/uploads/1598606417399-Logo_Chula.png' 
+            />
+        </Link>
+
+        <div className='login__container'>
+            <h1>Sign-in</h1>
+
+            <form action="log-in.php" method="POST">
+                <input
+                type="text"
+                name="Email"
+                id="Email"
+                class="form-control"
+                placeholder="Enter your Email"
+                />
+                <br/>
+                <input
+                type="password"
+                name="Password"
+                id="Password"
+                class="form-control"
+                placeholder="Enter Password"
+                />
+                <br/>
+                <input
+                type="submit"
+                value="Sign in"
+                class="btn btn-primary"
+                />
+            </form>
+
+            <p>
+                By signing-in you agree to the Chula Book Conditions of Use & Sale. Please
+                see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+            </p>
+
+            {/* <button onClick={register} className='login__registerButton'>Create your New Account</button> */}
+        </div>
+    </div>
+)
 }
 
 export default Login
+

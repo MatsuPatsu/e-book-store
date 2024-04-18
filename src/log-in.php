@@ -21,12 +21,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $result = $conn->query($query);
 
     if($result->num_rows == 0){
-        header("Location: error.html");
-        exit();
+        echo "FAILED";
     }
     else{
-        header("Location: success.html");
-        exit();
+        echo "SUCCESS";
     }
     $conn->close();
 
