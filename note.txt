@@ -1,0 +1,11 @@
+npm install react@17.0.2 —force
+npm install react-router-dom@5.3.0 —force
+npm install @stripe/react-stripe-js @material-ui/icons —force
+npm install moment react-currency-format —force
+npm install firebase@^8.0.0 —force
+npm install axios@0.24.0 —force
+npm install react-scripts
+
+npm start
+
+https://medium.com/@nutanbhogendrasharma/create-simple-reactjs-application-and-host-in-xampp-4dae8e466c50
